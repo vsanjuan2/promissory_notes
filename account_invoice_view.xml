@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="invoice_form" model="ir.ui.view">
+            <field name="name">chimpex.account.invoice.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/> 
+            <field name="arch" type="xml">
+                <field name="date_due" position="after">
+                    <field name="payment_status"/>
+                    <field name="promissory_note_number"/>
+                    <field name="pledged_number"/>
+                    <field name="pledged_date"/>
+                    <field name="pledge_bank_id"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="invoice_supplier_form" model="ir.ui.view">
+            <field name="name">chimpex.account.invoice.supplier.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/> 
+            <field name="arch" type="xml">
+                <field name="payment_term" position="after">
+                    <field name="promissory_note_number"/>
+                    <field name="payment_pledge"/>
+                    <field name="pledge_bank_id"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_account_invoice_filter" model="ir.ui.view">
+            <field name="name">chimpex.account.invoice.select</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.view_account_invoice_filter"/> 
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='unpaid']" position="after">
+                    <filter name="payment_status" string="Payment Status" help="Payment Status"/>
+                    <filter name="payment_pledge" string="Payment Pledge" help="Payment Pledge"/>
+                </xpath>
+                <xpath expr="//group[@string='Group By']" position="inside">
+                    <separator/>
+                    <filter string="Payment Status" context="{'group_by':'payment_status'}"/>
+                    <filter string="Pledged Number" context="{'group_by':'pledged_number'}"/>
+                    <filter string="Pledged Date" context="{'group_by':'pledged_date'}"/>
+                    <filter string="Payment Pledge" context="{'group_by':'payment_pledge'}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>
