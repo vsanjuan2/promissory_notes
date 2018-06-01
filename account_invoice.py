@@ -28,7 +28,7 @@ class account_invoice(models.Model):
         string='Pledge Date')
 
     pledge_bank_id = fields.Many2one(
-        comodel_name='res.company', 
+        comodel_name='res.partner.bank', 
         string='Pledge Bank')
 
     payment_pledge = fields.Boolean(
