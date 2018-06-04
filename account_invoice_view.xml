@@ -35,15 +35,16 @@
             <field name="inherit_id" ref="account.view_account_invoice_filter"/> 
             <field name="arch" type="xml">
                 <xpath expr="//filter[@name='unpaid']" position="after">
-                    <filter name="payment_status" string="Payment Status" help="Payment Status"/>
-                    <filter name="payment_pledge" string="Payment Pledge" help="Payment Pledge"/>
+                    <filter name="na" string="Na" help="Na" domain="[('payment_status','=','na')]"/>
+                    <filter name="pending" string="Pending" help="Pending" domain="[('payment_status','=','pending')]"/>
+                    <filter name="received" string="Received" help="Received" domain="[('payment_status','=','received')]"/>
+                    <filter name="pledged" string="Pledged" help="Pledged" domain="[('payment_status','=','pledged')]"/>
+                    <filter name="deposited" string="Deposited" help="Deposited" domain="[('payment_status','=','deposited')]"/>
                 </xpath>
                 <xpath expr="//group[@string='Group By']" position="inside">
                     <separator/>
-                    <filter string="Payment Status" context="{'group_by':'payment_status'}"/>
-                    <filter string="Pledged Number" context="{'group_by':'pledged_number'}"/>
-                    <filter string="Pledged Date" context="{'group_by':'pledged_date'}"/>
                     <filter string="Payment Pledge" context="{'group_by':'payment_pledge'}"/>
+                     <filter string="Pledged Bank" context="{'group_by':'pledge_bank_id'}"/>
                 </xpath>
             </field>
         </record>

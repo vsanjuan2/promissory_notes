@@ -39,3 +39,5 @@ class account_invoice(models.Model):
         if not date_invoice:
             date_invoice = fields.Date.context_today(self)
         return {'value': {'date_due': self.date_due or date_invoice}}
+
+    
