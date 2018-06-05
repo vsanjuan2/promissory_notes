@@ -44,7 +44,8 @@
                 <xpath expr="//group[@string='Group By']" position="inside">
                     <separator/>
                     <filter string="Payment Pledge" context="{'group_by':'payment_pledge'}"/>
-                     <filter string="Pledged Bank" context="{'group_by':'pledge_bank_id'}"/>
+                    <filter string="Pledged Bank" context="{'group_by':'pledge_bank_id'}"/>
+                    <filter string="Pledged Date" context="{'group_by':'pledged_date:week'}"/>
                 </xpath>
             </field>
         </record>
