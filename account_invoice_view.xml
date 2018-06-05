@@ -46,6 +46,7 @@
                     <filter name="deposited" string="Deposited" help="Deposited" domain="[('payment_status','=','deposited')]"/>
 
                     <filter string="Promissory Note" help="Payment Pledge" domain="[('payment_pledge','=',True)]"/>
+                    <filter string="None Promissory Note" help="None Payment Pledge" domain="[('payment_pledge','=',False)]"/>
                 </field>
                 <xpath expr="//group[@string='Group By']" position="inside">
                     <separator/>
