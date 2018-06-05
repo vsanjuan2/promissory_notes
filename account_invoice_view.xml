@@ -50,28 +50,10 @@
                 <xpath expr="//group[@string='Group By']" position="inside">
                     <separator/>
                     <filter string="Pledged Bank" context="{'group_by':'pledge_bank_id'}"/>
+                    <filter string="Payment Status" context="{'group_by':'payment_status'}"/>
                     <filter string="Pledged Date" context="{'group_by':'pledged_date:week'}"/>
                 </xpath>
             </field>
-        </record>
-
-        <record id="view_account_invoice_filter_supplier" model="ir.ui.view">
-            <field name="name">chimpex.account.invoice.select.supplier</field>
-            <field name="model">account.invoice</field>
-            <field name="inherit_id" ref="account.view_account_invoice_filter"/> 
-            <field name="arch" type="xml">
-                <xpath expr="//group[@string='Group By']" position="inside">
-                    <separator/>
-                    <filter string="Pledged Bank" context="{'group_by':'pledge_bank_id'}"/>
-                </xpath>
-            </field>
-        </record>
-
-        <record id="chimpex_action_invoice_tree2" model="ir.actions.act_window">
-            <field name="name">Supplier Invoices</field>
-            <field name="res_model">account.invoice</field>
-            <field name="inherit_id" ref="account.action_invoice_tree2"/>
-            <field name="search_view_id" ref="view_account_invoice_filter_supplier"/>
         </record>
     </data>
 </openerp>
