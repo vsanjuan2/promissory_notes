@@ -34,20 +34,44 @@
             <field name="model">account.invoice</field>
             <field name="inherit_id" ref="account.view_account_invoice_filter"/> 
             <field name="arch" type="xml">
-                <xpath expr="//filter[@name='unpaid']" position="after">
+                <xpath expr="//filter[@string='Due Month']" position="replace">
+                    <filter string="Due Date by Month" context="{'group_by':'date_due:month'}"/>
+                    <filter string="Due Date by Week" context="{'group_by':'date_due:week'}"/>
+                </xpath>
+                <field name="partner_id" position="before">
                     <filter name="na" string="Na" help="Na" domain="[('payment_status','=','na')]"/>
                     <filter name="pending" string="Pending" help="Pending" domain="[('payment_status','=','pending')]"/>
                     <filter name="received" string="Received" help="Received" domain="[('payment_status','=','received')]"/>
                     <filter name="pledged" string="Pledged" help="Pledged" domain="[('payment_status','=','pledged')]"/>
                     <filter name="deposited" string="Deposited" help="Deposited" domain="[('payment_status','=','deposited')]"/>
-                </xpath>
+
+                    <filter string="Payment Pledge" help="Payment Pledge" domain="[('payment_pledge','=',True)]"/>
+                </field>
                 <xpath expr="//group[@string='Group By']" position="inside">
                     <separator/>
-                    <filter string="Payment Pledge" context="{'group_by':'payment_pledge'}"/>
                     <filter string="Pledged Bank" context="{'group_by':'pledge_bank_id'}"/>
                     <filter string="Pledged Date" context="{'group_by':'pledged_date:week'}"/>
                 </xpath>
             </field>
+        </record>
+
+        <record id="view_account_invoice_filter_supplier" model="ir.ui.view">
+            <field name="name">chimpex.account.invoice.select.supplier</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.view_account_invoice_filter"/> 
+            <field name="arch" type="xml">
+                <xpath expr="//group[@string='Group By']" position="inside">
+                    <separator/>
+                    <filter string="Pledged Bank" context="{'group_by':'pledge_bank_id'}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="chimpex_action_invoice_tree2" model="ir.actions.act_window">
+            <field name="name">Supplier Invoices</field>
+            <field name="res_model">account.invoice</field>
+            <field name="inherit_id" ref="account.action_invoice_tree2"/>
+            <field name="search_view_id" ref="view_account_invoice_filter_supplier"/>
         </record>
     </data>
 </openerp>
