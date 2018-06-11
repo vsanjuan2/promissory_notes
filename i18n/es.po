@@ -43,7 +43,7 @@ msgstr "Vencimiento por semana"
 #. module: promissory_notes
 #: model:ir.model,name:promissory_notes.model_account_invoice
 msgid "Invoice"
-msgstr ""
+msgstr "Factura"
 
 #. module: promissory_notes
 #: selection:account.invoice,payment_status:0
@@ -53,12 +53,12 @@ msgstr ""
 #. module: promissory_notes
 #: view:account.invoice:promissory_notes.view_account_invoice_filter
 msgid "None Payment Pledge"
-msgstr ""
+msgstr "Sin Descontar"
 
 #. module: promissory_notes
 #: view:account.invoice:promissory_notes.view_account_invoice_filter
 msgid "None Promissory Note"
-msgstr ""
+msgstr "Sin Pagaré"
 
 #. module: promissory_notes
 #: view:account.invoice:promissory_notes.view_account_invoice_filter
@@ -74,7 +74,7 @@ msgstr "Situación pago"
 #. module: promissory_notes
 #: selection:account.invoice,payment_status:0
 msgid "Pendientes"
-msgstr ""
+msgstr "Pendientes"
 
 #. module: promissory_notes
 #: view:account.invoice:promissory_notes.view_account_invoice_filter
@@ -135,4 +135,3 @@ msgstr "Recibido"
 #: selection:account.invoice,payment_status:0
 msgid "Recibidas"
 msgstr "Recibidas"
-
