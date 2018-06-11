@@ -1,46 +1,138 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* acelerem_account
+#	* promissory_notes
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 8.0rc1\n"
+"Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-03 10:32+0000\n"
-"PO-Revision-Date: 2018-06-03 12:32+0100\n"
+"POT-Creation-Date: 2018-06-11 18:59+0000\n"
+"PO-Revision-Date: 2018-06-11 18:59+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
-#. module: acelerem_account
+#. module: promissory_notes
+#: selection:account.invoice,payment_status:0
+msgid "Depositadas"
+msgstr "Depositadas"
+
+#. module: promissory_notes
+#: view:account.invoice:promissory_notes.view_account_invoice_filter
+msgid "Deposited"
+msgstr "Depositadas"
+
+#. module: promissory_notes
+#: selection:account.invoice,payment_status:0
+msgid "Descontadas"
+msgstr "Descontadas"
+
+#. module: promissory_notes
+#: view:account.invoice:promissory_notes.view_account_invoice_filter
+msgid "Due Date by Month"
+msgstr "Vencimiento por mes"
+
+#. module: promissory_notes
+#: view:account.invoice:promissory_notes.view_account_invoice_filter
+msgid "Due Date by Week"
+msgstr "Vencimiento por semana"
+
+#. module: promissory_notes
+#: model:ir.model,name:promissory_notes.model_account_invoice
+msgid "Invoice"
+msgstr ""
+
+#. module: promissory_notes
+#: selection:account.invoice,payment_status:0
+msgid "Na"
+msgstr ""
+
+#. module: promissory_notes
+#: view:account.invoice:promissory_notes.view_account_invoice_filter
+msgid "None Payment Pledge"
+msgstr ""
+
+#. module: promissory_notes
+#: view:account.invoice:promissory_notes.view_account_invoice_filter
+msgid "None Promissory Note"
+msgstr ""
+
+#. module: promissory_notes
+#: view:account.invoice:promissory_notes.view_account_invoice_filter
+msgid "Payment Pledge"
+msgstr "Descontada"
+
+#. module: promissory_notes
+#: view:account.invoice:promissory_notes.view_account_invoice_filter
 #: field:account.invoice,payment_status:0
 msgid "Payment Status"
-msgstr "Estado pagaré"
+msgstr "Situación pago"
 
-#. module: acelerem_account
-#: field:account.invoice,promissory_note_number:0
-msgid "Promissory Note Number"
-msgstr "Número pagaré"
+#. module: promissory_notes
+#: selection:account.invoice,payment_status:0
+msgid "Pendientes"
+msgstr ""
 
-#. module: acelerem_account
-#: field:account.invoice,pledged_number:0
-msgid "Pledge Number"
-msgstr "Código descuento"
+#. module: promissory_notes
+#: view:account.invoice:promissory_notes.view_account_invoice_filter
+msgid "Pending"
+msgstr "Pendientes"
 
-#. module: acelerem_account
-#: field:account.invoice,pledged_date:0
-msgid "Pledge Date"
-msgstr "Vencimiento"
-
-#. module: acelerem_account
+#. module: promissory_notes
 #: field:account.invoice,pledge_bank_id:0
 msgid "Pledge Bank"
 msgstr "Banco pagaré"
 
-#. module: acelerem_account
+#. module: promissory_notes
+#: field:account.invoice,pledged_date:0
+msgid "Pledge Date"
+msgstr "Fecha descuento"
+
+#. module: promissory_notes
+#: field:account.invoice,pledged_number:0
+msgid "Pledge Number"
+msgstr "Número descuento"
+
+#. module: promissory_notes
+#: view:account.invoice:promissory_notes.view_account_invoice_filter
+msgid "Pledged"
+msgstr "Descontada"
+
+#. module: promissory_notes
+#: view:account.invoice:promissory_notes.view_account_invoice_filter
+msgid "Pledged Bank"
+msgstr "Banco pagaré"
+
+#. module: promissory_notes
+#: view:account.invoice:promissory_notes.view_account_invoice_filter
+msgid "Pledged Date"
+msgstr "Fecha descuento"
+
+#. module: promissory_notes
+#: view:account.invoice:promissory_notes.view_account_invoice_filter
+msgid "Promissory Note"
+msgstr "Pagaré"
+
+#. module: promissory_notes
+#: field:account.invoice,promissory_note_number:0
+msgid "Promissory Note Number"
+msgstr "Número de pagaré"
+
+#. module: promissory_notes
 #: field:account.invoice,payment_pledge:0
 msgid "Promissory note"
-msgstr "Pagaré emitido"
+msgstr "Pagaré"
+
+#. module: promissory_notes
+#: view:account.invoice:promissory_notes.view_account_invoice_filter
+msgid "Received"
+msgstr "Recibido"
+
+#. module: promissory_notes
+#: selection:account.invoice,payment_status:0
+msgid "Recibidas"
+msgstr "Recibidas"
+
