@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# © 2018 Tosin Komolafe @ Ballotnet Solutions Ltd <komolafetosin@gmail.com>
+# © 2018 Salvador Sanjuan @ Acelerem salvador@aceleratuempresa.net
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 {
-    'name' : 'Chimpex Invoicing',
+    'name' : 'Acelerem Promissory',
     'version' : '1.0',
-    'author' : 'Chimpex Solutions Ltd',
+    'author' : 'Acelerem',
     'category' : 'Accounting & Finance',
     'description' : """
 Chimpex Accounting and Financial Management.
@@ -27,14 +27,14 @@ Creates a dashboard for accountants that includes:
     * Company Analysis
     * Graph of Treasury
 
-Processes like maintaining general ledgers are done through the defined Financial Journals (entry move line or grouping is maintained through a journal) 
+Processes like maintaining general ledgers are done through the defined Financial Journals (entry move line or grouping is maintained through a journal)
 for a particular financial year and for preparation of vouchers there is a module named account_voucher.
     """,
-    'website': 'tosinkomolafe.com',
+    'website': 'odoo.acelerem.com',
     'depends' : ['account'],
     'data': [
         'account_invoice_view.xml',
-     
+
     ],
     'qweb' : [],
     'demo': [],

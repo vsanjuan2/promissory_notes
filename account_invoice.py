@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# © 2018 Tosin Komolafe @ Ballotnet Solutions Ltd <komolafetosin@gmail.com>
+# © 2018 Salvador Sanjuan @ Acelerem salvador@aceleratuempresa.net
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from openerp import models, fields, api, _
@@ -14,7 +14,7 @@ class account_invoice(models.Model):
             ('received','Received'),
             ('pledged','Pledged'),
             ('deposited','Deposited'),
-        ], string='Payment Status', 
+        ], string='Payment Status',
         default='na',
         required=True)
 
@@ -28,7 +28,7 @@ class account_invoice(models.Model):
         string='Pledge Date')
 
     pledge_bank_id = fields.Many2one(
-        comodel_name='res.partner.bank', 
+        comodel_name='res.partner.bank',
         string='Pledge Bank')
 
     payment_pledge = fields.Boolean(
@@ -39,5 +39,3 @@ class account_invoice(models.Model):
         if not date_invoice:
             date_invoice = fields.Date.context_today(self)
         return {'value': {'date_due': self.date_due or date_invoice}}
-
-    

@@ -2,9 +2,9 @@
 <openerp>
     <data>
         <record id="invoice_form" model="ir.ui.view">
-            <field name="name">chimpex.account.invoice.form</field>
+            <field name="name">acelerem.account.invoice.form</field>
             <field name="model">account.invoice</field>
-            <field name="inherit_id" ref="account.invoice_form"/> 
+            <field name="inherit_id" ref="account.invoice_form"/>
             <field name="arch" type="xml">
                 <field name="date_due" position="after">
                     <field name="payment_status"/>
@@ -17,9 +17,9 @@
         </record>
 
         <record id="invoice_supplier_form" model="ir.ui.view">
-            <field name="name">chimpex.account.invoice.supplier.form</field>
+            <field name="name">acelerem.account.invoice.supplier.form</field>
             <field name="model">account.invoice</field>
-            <field name="inherit_id" ref="account.invoice_supplier_form"/> 
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
             <field name="arch" type="xml">
                 <field name="payment_term" position="after">
                     <field name="promissory_note_number"/>
@@ -30,9 +30,9 @@
         </record>
 
         <record id="view_account_invoice_filter" model="ir.ui.view">
-            <field name="name">chimpex.account.invoice.select</field>
+            <field name="name">acelerem.account.invoice.select</field>
             <field name="model">account.invoice</field>
-            <field name="inherit_id" ref="account.view_account_invoice_filter"/> 
+            <field name="inherit_id" ref="account.view_account_invoice_filter"/>
             <field name="arch" type="xml">
                 <xpath expr="//filter[@string='Due Month']" position="replace">
                     <filter string="Due Date by Month" context="{'group_by':'date_due:month'}"/>
