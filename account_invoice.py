@@ -10,10 +10,10 @@ class account_invoice(models.Model):
 
     payment_status = fields.Selection([
             ('na','Na'),
-            ('pending','Pending'),
-            ('received','Received'),
-            ('pledged','Pledged'),
-            ('deposited','Deposited'),
+            ('pending','Pendientes'),
+            ('received','Recibidas'),
+            ('pledged','Descontadas'),
+            ('deposited','Depositadas'),
         ], string='Payment Status',
         default='na',
         required=True)
