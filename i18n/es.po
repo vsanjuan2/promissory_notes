@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* chimpex_account
+#	* acelerem_account
 #
 msgid ""
 msgstr ""
@@ -15,32 +15,32 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
 
-#. module: chimpex_account
+#. module: acelerem_account
 #: field:account.invoice,payment_status:0
 msgid "Payment Status"
 msgstr "Estado pagaré"
 
-#. module: chimpex_account
+#. module: acelerem_account
 #: field:account.invoice,promissory_note_number:0
 msgid "Promissory Note Number"
 msgstr "Número pagaré"
 
-#. module: chimpex_account
+#. module: acelerem_account
 #: field:account.invoice,pledged_number:0
 msgid "Pledge Number"
 msgstr "Código descuento"
 
-#. module: chimpex_account
+#. module: acelerem_account
 #: field:account.invoice,pledged_date:0
 msgid "Pledge Date"
 msgstr "Vencimiento"
 
-#. module: chimpex_account
+#. module: acelerem_account
 #: field:account.invoice,pledge_bank_id:0
 msgid "Pledge Bank"
 msgstr "Banco pagaré"
 
-#. module: chimpex_account
+#. module: acelerem_account
 #: field:account.invoice,payment_pledge:0
 msgid "Promissory note"
 msgstr "Pagaré emitido"
